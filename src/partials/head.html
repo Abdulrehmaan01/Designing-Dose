@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{desc}}">
+  <meta name="theme-color" content="#F3F1EC">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // Set pre-paint state: preloader on first visit, curtain cover when arriving via in-site navigation.
+    (function () {
+      var h = document.documentElement, s = window.sessionStorage;
+      h.classList.add('js');
+      var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      try {
+        if (s.getItem('dd_nav') === '1' && !reduce) h.classList.add('is-entering');
+        else if (!s.getItem('dd_seen') && !reduce) h.classList.add('is-preloading');
+        s.removeItem('dd_nav');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="{{body}}">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Preloader (first visit per session) -->
+<div class="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <div class="preloader__pill"><span></span><span></span></div>
+    <div class="preloader__word"><span>Designing</span> <em>Dose</em></div>
+    <div class="preloader__count"><span class="js-count">0</span>%</div>
+  </div>
+</div>
+
+<!-- Page transition curtain -->
+<div class="curtain" aria-hidden="true">
+  <div class="curtain__panel curtain__panel--1"></div>
+  <div class="curtain__panel curtain__panel--2">
+    <div class="curtain__logo"><span class="logo-pill"><i></i><i></i></span> Designing Dose</div>
+  </div>
+</div>
+
+<!-- Custom cursor -->
+<div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__label"></div></div>
+<div class="scroll-progress" aria-hidden="true"></div>
