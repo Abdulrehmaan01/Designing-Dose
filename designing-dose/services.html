@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services — Designing Dose Studio</title>
+  <meta name="description" content="Comprehensive design and development services tailored for hyper-growth brands and tech products.">
+  <meta name="theme-color" content="#F3F1EC">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // Set pre-paint state: preloader on first visit, curtain cover when arriving via in-site navigation.
+    (function () {
+      var h = document.documentElement, s = window.sessionStorage;
+      h.classList.add('js');
+      var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      try {
+        if (s.getItem('dd_nav') === '1' && !reduce) h.classList.add('is-entering');
+        else if (!s.getItem('dd_seen') && !reduce) h.classList.add('is-preloading');
+        s.removeItem('dd_nav');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="page-services">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Preloader (first visit per session) -->
+<div class="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <div class="preloader__pill"><span></span><span></span></div>
+    <div class="preloader__word"><span>Designing</span> <em>Dose</em></div>
+    <div class="preloader__count"><span class="js-count">0</span>%</div>
+  </div>
+</div>
+
+<!-- Page transition curtain -->
+<div class="curtain" aria-hidden="true">
+  <div class="curtain__panel curtain__panel--1"></div>
+  <div class="curtain__panel curtain__panel--2">
+    <div class="curtain__logo"><span class="logo-pill"><i></i><i></i></span> Designing Dose</div>
+  </div>
+</div>
+
+<!-- Custom cursor -->
+<div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__label"></div></div>
+<div class="scroll-progress" aria-hidden="true"></div>
+<header class="header">
+  <div class="header__bar">
+    <a href="index.html" class="logo" data-nav="home" aria-label="Designing Dose home">
+      <span class="logo-pill"><i></i><i></i></span>
+      <span class="logo__text">Designing<em>Dose</em></span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="services.html" data-nav="services" aria-current="page" class="nav__link"><span data-hover="Services">Services</span></a>
+      <a href="work.html" data-nav="work" class="nav__link"><span data-hover="Work">Work</span></a>
+      <a href="about.html" data-nav="about" class="nav__link"><span data-hover="About">About</span></a>
+      <a href="pricing.html" data-nav="pricing" class="nav__link"><span data-hover="Dosage">Dosage</span></a>
+      <a href="contact.html" data-nav="contact" class="nav__link"><span data-hover="Contact">Contact</span></a>
+    </nav>
+    <a href="contact.html" class="btn btn--dark btn--sm header__cta" data-magnetic>
+      <span class="btn__dot"></span><span class="btn__text" data-hover="Let's talk">Let's talk</span>
+    </a>
+    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu__bg"></div>
+  <nav class="menu__nav" aria-label="Mobile navigation">
+    <a href="index.html"><small>00</small><span>Home</span></a>
+    <a href="services.html"><small>01</small><span>Services</span></a>
+    <a href="work.html"><small>02</small><span>Work</span></a>
+    <a href="about.html"><small>03</small><span>About</span></a>
+    <a href="pricing.html"><small>04</small><span>Dosage</span></a>
+    <a href="contact.html"><small>05</small><span>Contact</span></a>
+  </nav>
+  <div class="menu__foot">
+    <a href="mailto:hello@designingdose.studio">hello@designingdose.studio</a>
+    <div class="menu__socials"><a href="#">Dribbble</a><a href="#">Behance</a><a href="#">Instagram</a><a href="#">LinkedIn</a></div>
+  </div>
+</div>
+
+<main id="main">
+<!-- ============ SERVICES HERO ============ -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow" data-hero><span class="dot"></span> Studio Capabilities</span>
+    <h1 class="page-hero__title" data-split>
+      Design &amp; build for <em>every</em> stage of growth<span class="page-hero__count">(06)</span>
+    </h1>
+    <div class="page-hero__row">
+      <p class="lead" data-hero>
+        From strategic identity systems to high-converting Webflow platforms and complex SaaS applications. We engineer complete brand and product ecosystems.
+      </p>
+      <div class="hero__actions" data-hero>
+        <a href="contact.html" class="btn btn--orange" data-magnetic>
+          <span class="btn__text" data-hover="Start a project">Start a project</span>
+          <span class="btn__arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </a>
+        <a href="work.html" class="btn btn--outline" data-magnetic>
+          <span class="btn__text" data-hover="View case studies">View case studies</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES GRID ============ -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="svc-grid">
+      <!-- 01 -->
+      <article class="svc-card" data-reveal>
+        <div class="svc-card__head">
+          <span class="svc-card__num">01</span>
+          <a href="contact.html" class="arrow-btn" aria-label="Book Website Design"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+        <div>
+          <h3>Website Design &amp; Dev</h3>
+          <p class="mt-s">Bespoke digital flagships engineered for conversions, narrative immersion, and benchmark performance across any screen.</p>
+        </div>
+        <div class="svc-card__best"><b>Best for:</b> Series A–C tech startups, scaling e-commerce, modern consultancies.</div>
+        <div class="svc-card__media">
+          <img src="assets/img/work-1.jpg" alt="Website Design Showcase" loading="lazy">
+        </div>
+      </article>
+
+      <!-- 02 -->
+      <article class="svc-card" data-reveal>
+        <div class="svc-card__head">
+          <span class="svc-card__num">02</span>
+          <a href="contact.html" class="arrow-btn" aria-label="Book Product Design"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+        <div>
+          <h3>Product &amp; UI/UX Design</h3>
+          <p class="mt-s">Complex logic translated into effortless user experiences. Complete web apps, intuitive dashboards, and cross-platform mobile apps.</p>
+        </div>
+        <div class="svc-card__best"><b>Best for:</b> Fintech, AI platforms, B2B SaaS, and health applications.</div>
+        <div class="svc-card__media">
+          <img src="assets/img/work-2.jpg" alt="Product Design Showcase" loading="lazy">
+        </div>
+      </article>
+
+      <!-- 03 -->
+      <article class="svc-card" data-reveal>
+        <div class="svc-card__head">
+          <span class="svc-card__num">03</span>
+          <a href="contact.html" class="arrow-btn" aria-label="Book Brand Identity"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+        <div>
+          <h3>Brand Identity Systems</h3>
+          <p class="mt-s">Visual identity with unmatched distinction. Logos, typography, motion language, physical collateral, and ironclad brand guidelines.</p>
+        </div>
+        <div class="svc-card__best"><b>Best for:</b> New ventures, legacy rebrands, challenger consumer brands.</div>
+        <div class="svc-card__media">
+          <img src="assets/img/work-3.jpg" alt="Brand Identity Showcase" loading="lazy">
+        </div>
+      </article>
+
+      <!-- 04 -->
+      <article class="svc-card" data-reveal>
+        <div class="svc-card__head">
+          <span class="svc-card__num">04</span>
+          <a href="contact.html" class="arrow-btn" aria-label="Book Webflow Development"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+        <div>
+          <h3>Webflow &amp; Framer Builds</h3>
+          <p class="mt-s">Production-grade visual development enabling your marketing team to iterate instantly without engineering bottlenecks.</p>
+        </div>
+        <div class="svc-card__best"><b>Best for:</b> Agile marketing teams, fast product launches, growth teams.</div>
+        <div class="svc-card__media">
+          <img src="assets/img/work-4.jpg" alt="Visual Development Showcase" loading="lazy">
+        </div>
+      </article>
+
+      <!-- 05 -->
+      <article class="svc-card" data-reveal>
+        <div class="svc-card__head">
+          <span class="svc-card__num">05</span>
+          <a href="contact.html" class="arrow-btn" aria-label="Book Mobile App UI"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+        <div>
+          <h3>Mobile App Experiences</h3>
+          <p class="mt-s">Native iOS &amp; Android design systems focused on micro-interactions, habit loops, and buttery-smooth gestural UX.</p>
+        </div>
+        <div class="svc-card__best"><b>Best for:</b> Consumer mobile startups, connected devices, healthcare apps.</div>
+        <div class="svc-card__media">
+          <img src="assets/img/work-5.jpg" alt="Mobile App Showcase" loading="lazy">
+        </div>
+      </article>
+
+      <!-- 06 -->
+      <article class="svc-card" data-reveal>
+        <div class="svc-card__head">
+          <span class="svc-card__num">06</span>
+          <a href="contact.html" class="arrow-btn" aria-label="Book High-Velocity Landing Pages"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+        <div>
+          <h3>High-Velocity Landing Pages</h3>
+          <p class="mt-s">Conversion-engineered single-page engines crafted for high-stakes product drops, hardware pre-orders, and paid campaigns.</p>
+        </div>
+        <div class="svc-card__best"><b>Best for:</b> Product Hunt launches, paid ad funnels, new feature launches.</div>
+        <div class="svc-card__media">
+          <img src="assets/img/work-6.jpg" alt="Landing Page Showcase" loading="lazy">
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAPABILITIES DEEP DIVE ============ -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> Full Matrix</span>
+        <h2 class="h2" data-split>What's in your <em>prescription</em></h2>
+      </div>
+      <p class="section-head__side" data-reveal>Everything you need from pre-seed discovery through IPO scaling, coordinated under one creative direction.</p>
+    </div>
+
+    <div class="caps" data-reveal>
+      <div class="caps__col">
+        <h3><span class="dot"></span> Strategy &amp; Discovery</h3>
+        <ul>
+          <li>Competitive Landscape Audit</li>
+          <li>Product Framing &amp; Positioning</li>
+          <li>User Journey Mapping</li>
+          <li>Information Architecture</li>
+          <li>Content Strategy &amp; Messaging</li>
+          <li>UX Research &amp; Usability Audits</li>
+        </ul>
+      </div>
+      <div class="caps__col">
+        <h3><span class="dot"></span> Brand &amp; Identity</h3>
+        <ul>
+          <li>Logo Systems &amp; Monograms</li>
+          <li>Typography Direction</li>
+          <li>Color Science &amp; Accessible Palettes</li>
+          <li>Custom Iconography Sets</li>
+          <li>3D &amp; Motion Language Guidelines</li>
+          <li>Packaging &amp; Physical Collateral</li>
+        </ul>
+      </div>
+      <div class="caps__col">
+        <h3><span class="dot"></span> UI/UX &amp; Systems</h3>
+        <ul>
+          <li>Cross-Platform Design Systems</li>
+          <li>Figma Component Architecture</li>
+          <li>Design Tokens &amp; Hand-off</li>
+          <li>Micro-Interaction Specs</li>
+          <li>Dark / Light System Modes</li>
+          <li>Interactive Clickable Prototypes</li>
+        </ul>
+      </div>
+      <div class="caps__col">
+        <h3><span class="dot"></span> Development &amp; Motion</h3>
+        <ul>
+          <li>Webflow CMS &amp; E-commerce</li>
+          <li>Framer Interactive Deployments</li>
+          <li>GSAP &amp; WebGL Motion Choreography</li>
+          <li>Custom Headless Frontends</li>
+          <li>Technical SEO &amp; Core Web Vitals 100</li>
+          <li>Continuous Maintenance &amp; Sprints</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLING & STACK ============ -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> Stack &amp; Tooling</span>
+        <h2 class="h2" data-split>Modern tools for <em>elite</em> results</h2>
+      </div>
+    </div>
+    <div class="tools" data-reveal>
+      <div class="tool"><i></i>Figma</div>
+      <div class="tool"><i></i>Webflow</div>
+      <div class="tool"><i></i>Framer</div>
+      <div class="tool"><i></i>GSAP</div>
+      <div class="tool"><i></i>Three.js</div>
+      <div class="tool"><i></i>Next.js</div>
+      <div class="tool"><i></i>Tailwind CSS</div>
+      <div class="tool"><i></i>Shopify Plus</div>
+      <div class="tool"><i></i>Linear</div>
+      <div class="tool"><i></i>GitHub</div>
+      <div class="tool"><i></i>Spline 3D</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="section--tight">
+  <div class="container">
+    <div class="cta-banner" data-reveal>
+      <div class="cta-banner__pill" aria-hidden="true"><span></span><span></span></div>
+      <h2 data-split>Need a custom <em>cocktail</em> of services?</h2>
+      <div class="cta-banner__side">
+        <p>Whether you need a full rebrand, a dedicated design sprint, or an ongoing embedded design partnership, we configure the exact dose your team needs.</p>
+        <a href="contact.html" class="btn btn--orange" data-magnetic>
+          <span class="btn__text" data-hover="Configure your dose">Configure your dose</span>
+          <span class="btn__arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__lead">
+        <p class="eyebrow eyebrow--light"><span class="dot dot--live"></span> Booking projects for Q1 2027</p>
+        <h2 class="footer__title" data-split>Ready for your <em>next dose</em> of great design?</h2>
+        <a href="mailto:hello@designingdose.studio" class="footer__mail" data-cursor="Write us">hello@designingdose.studio<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <h3>Services</h3>
+          <a href="services.html">Website design</a>
+          <a href="services.html">Product design</a>
+          <a href="services.html">Brand identity</a>
+          <a href="services.html">Landing pages</a>
+          <a href="services.html">Webflow &amp; Framer</a>
+        </div>
+        <div>
+          <h3>Studio</h3>
+          <a href="work.html">Work</a>
+          <a href="about.html">About</a>
+          <a href="pricing.html">Dosage plans</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h3>Follow</h3>
+          <a href="#">Dribbble</a>
+          <a href="#">Behance</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__brand" aria-hidden="true">
+      <span>Designing</span><em>Dose</em>
+    </div>
+    <div class="footer__bottom">
+      <span>© Designing Dose Studio 2026</span>
+      <span class="footer__time">Local time <b class="js-clock">--:--</b></span>
+      <button class="btn btn--ghost-light btn--sm js-top" data-magnetic><span class="btn__text" data-hover="Back to top">Back to top</span> ↑</button>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
